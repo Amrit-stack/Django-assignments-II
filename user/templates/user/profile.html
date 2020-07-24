@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View profile</title>
+</head>
+<body>
+<form>
+    {% csrf_token %}
+    Click <a href="/user/logout">here</a> to logout
+    <h1>Hello this is to view profile</h1>
+    Name:{{request.user.get_full_name}}<br>
+    Email:{{request.user.email}}<br>
+    Username:{{request.user.username}}
+
+</form>
+</body>
+</html>
